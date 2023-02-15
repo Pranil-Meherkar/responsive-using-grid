@@ -13,6 +13,7 @@ body {
   display: grid;
   padding: 50px 100px;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 50px 40px;
 }
 
@@ -20,9 +21,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #82c3ec;
-  height: 400px;
   border-radius: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .content {
@@ -43,14 +44,23 @@ body {
 
 .name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 3vw;
   margin: 30px 0 5px 0;
 }
+.role {
+  font-size: 1.5vw;
+}
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1199px) {
   .container {
-    display: grid;
     padding: 20px;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .name {
+    font-size: 10vw;
+  }
+  .role {
+    font-size: 7vw;
   }
 }
